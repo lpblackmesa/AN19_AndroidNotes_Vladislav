@@ -13,4 +13,14 @@
     <string name="you_have_an_account">You have an account? </string>
     <string name="skip_text">Skip</string>
     <string name="onboarding_description">There is some text with description</string>
+    <string name="add_note_text">Add Note</string>
+    <string name="title_edit">Title</string>
+    <string name="message_edit">Message</string>
+    <string name="add_button">Add</string>
+    <string name="back_textbutton">Back</string>
+    <string name="profile_text">Profile</string>
+    <string name="logout_text">Logout</string>
+    <string name="delete_profile_text">Delete profile</string>
+    <string name="detele_notes_text">Detele all notes</string>
+
 </resources>

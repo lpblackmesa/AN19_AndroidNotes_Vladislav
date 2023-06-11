@@ -9,19 +9,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
-        android:textSize="@dimen/textSize40"
+        android:textSize="@dimen/textSize_40"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="@dimen/bias_015" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/firstNameLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeft_Right"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/margin_30"
         android:layout_marginRight="@dimen/marginLeft_Right"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -39,7 +39,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeft_Right"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/margin_30"
         android:layout_marginRight="@dimen/marginLeft_Right"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -57,7 +57,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeft_Right"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/margin_30"
         android:layout_marginRight="@dimen/marginLeft_Right"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -76,7 +76,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeft_Right"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/margin_30"
         android:layout_marginRight="@dimen/marginLeft_Right"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -101,7 +101,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="@dimen/button_bias_08" />
 
     <TextView
         android:id="@+id/have_an_account"
@@ -113,7 +113,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/loginText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="@dimen/bottomtext_bias_09" />
 
     <TextView
         android:id="@+id/loginText"

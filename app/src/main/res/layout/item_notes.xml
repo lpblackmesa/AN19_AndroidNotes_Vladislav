@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/note_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Note Name"
+        android:textSize="@dimen/size_text_30"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/date_note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="05/02/2023"
+        android:textSize="@dimen/size_text_30"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:paddingTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/note_name"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="note text dfdfsdfsdfsdf"
+        android:textSize="@dimen/size_text_30"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

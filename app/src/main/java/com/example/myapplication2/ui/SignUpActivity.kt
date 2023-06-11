@@ -1,9 +1,10 @@
-package com.example.myapplication2
+package com.example.myapplication2.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication2.R
 
 class SignUpActivity: AppCompatActivity() {
 
@@ -12,7 +13,7 @@ class SignUpActivity: AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 var loginText = findViewById<TextView>(R.id.loginText)
         loginText.setOnClickListener{
-            startActivity(Intent(this,LoginActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }

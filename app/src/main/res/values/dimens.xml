@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="main_textSize">80sp</dimen>
+    <dimen name="textSize_40">40sp</dimen>
+    <dimen name="marginLeft_Right">60dp</dimen>
+    <dimen name="size_text_30">30sp</dimen>
+    <dimen name="size_text_20">20sp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="button_bias_08">0.8</dimen>
+    <dimen name="maintext_bias_04">0.4</dimen>
+    <dimen name="bias_015">0.15</dimen>
+    <dimen name="bottomtext_bias_09">0.9</dimen>
+    <dimen name="skip_text_padding_top">15dp</dimen>
+    <dimen name="skip_text_padding_end">30dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="recycle_padding16">16dp</dimen>
 </resources>

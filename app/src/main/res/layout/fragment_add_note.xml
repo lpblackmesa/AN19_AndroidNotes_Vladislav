@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/mainText"
+        android:id="@+id/skipText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_in_text"
-        android:textSize="@dimen/textSize_40"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableStart="?attr/actionModeCloseDrawable"
+        android:paddingStart="@dimen/skip_text_padding_end"
+        android:paddingTop="@dimen/skip_text_padding_top"
+        android:text="@string/back_textbutton"
+        android:textSize="@dimen/size_text_30"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/add_note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_note_text"
+        android:textSize="@dimen/textSize_40"
+        android:layout_marginTop="@dimen/margin_80"
+        android:layout_marginStart="@dimen/margin_25"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="@dimen/bias_015" />
-
+        app:layout_constraintStart_toStartOf="parent"/>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLayout"
+        android:id="@+id/titleLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeft_Right"
@@ -25,18 +34,17 @@
         android:layout_marginRight="@dimen/marginLeft_Right"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainText">
+        app:layout_constraintTop_toBottomOf="@id/add_note_text">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEdit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/e_mail_hint"
-            android:inputType="textEmailAddress" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/titleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_edit" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordLayout"
+        android:id="@+id/messageLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginLeft_Right"
@@ -44,40 +52,28 @@
         android:layout_marginRight="@dimen/marginLeft_Right"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailLayout"
-        app:passwordToggleContentDescription="descript!ion"
-        app:passwordToggleEnabled="true">
+        app:layout_constraintTop_toBottomOf="@id/titleLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordEdit"
+            android:id="@+id/messageEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password_hint"
-            android:inputType="textPassword" />
+            android:gravity="start"
+            android:hint="@string/message_edit"
+            android:lines="8"
+            android:singleLine="false" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_in_text"
+        android:text="@string/add_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="@dimen/button_bias_08" />
-
-    <TextView
-        android:id="@+id/returnToSignText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Return to Sign-up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="@dimen/bottomtext_bias_09" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
