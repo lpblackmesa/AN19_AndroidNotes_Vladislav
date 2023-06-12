@@ -1,7 +1,22 @@
 package com.example.myapplication2.db
 
-object NotesDatabase
-{
+import android.content.Context
+import androidx.room.Room
+import androidx.room.RoomDatabase
+
+object NotesDatabase {
+
+    var noteDao: NoteDao? = null
+
+    private var db: AppDataBase? = null
+
+    //инициализация базы данных
+fun initDB(context : Context) {
+    db = Room.databaseBuilder(context, AppDataBase::class.java, "data-base")
+        .allowMainThreadQueries()
+        .build()
+    noteDao = db?.getNoteDao()
+}
     val notesArray = arrayListOf<Note>(
         Note("note1",12121221,"NoteText1"),
         Note("note2",12121221,"NoteText2"),
