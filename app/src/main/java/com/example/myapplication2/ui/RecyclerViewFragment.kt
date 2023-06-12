@@ -13,6 +13,7 @@ import com.example.myapplication2.R
 import com.example.myapplication2.databinding.FragmentRecyclerviewBinding
 import com.example.myapplication2.db.Note
 import com.example.myapplication2.db.NotesDatabase
+import com.example.myapplication2.repository.SharedPreferenceRepository
 import com.example.myapplication2.viewmodels.NoteViewModel
 
 class RecyclerViewFragment : Fragment() {
@@ -41,6 +42,8 @@ class RecyclerViewFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentRecyclerviewBinding.inflate(inflater, container, false)
+        //переводим флаг в состояние "не первый запуск"
+       SharedPreferenceRepository.setIsFirstOpen(false)
         return binding.root
     }
 
