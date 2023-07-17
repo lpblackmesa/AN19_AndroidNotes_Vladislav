@@ -16,4 +16,6 @@
     <dimen name="skip_text_padding_end">30dp</dimen>
     <dimen name="margin_25">25dp</dimen>
     <dimen name="recycle_padding16">16dp</dimen>
+    <dimen name="bottom_navbar_height">58dp</dimen>
+
 </resources>

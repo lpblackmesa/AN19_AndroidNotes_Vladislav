@@ -1,13 +1,36 @@
 package com.example.myapplication2.repository
 
+import com.example.myapplication2.db.AppDataBase
 import com.example.myapplication2.db.Note
 import com.example.myapplication2.db.NotesDatabase
+import com.example.myapplication2.entity.NoteEntity
 
 class NotesRepository {
 
-    fun getNotes() = NotesDatabase.notesArray
+   suspend fun getNotes(): ArrayList<Note> {
+        return (NotesDatabase.noteDao?.getNotes()?.map {
+            Note(
+                it.noteName ,
+                it.date ,
+                it.noteText
+            )
+        } as? ArrayList<Note>) ?: arrayListOf()
+    }
 
-    fun addNote(note: Note) = NotesDatabase.notesArray.add(note)
+   suspend fun addNote(note: Note) : Boolean{
+        NotesDatabase.noteDao?.insertNote(NoteEntity(
+            note.noteName,
+            note.date,
+            note.noteText
+        ))
+        return true
+    }
 
-    fun delNote(note : Note ) = NotesDatabase.notesArray.remove(note)
+   suspend fun delNote(note : Note ) {
+        NotesDatabase.noteDao?.delNote(NoteEntity(
+            note.noteName,
+            note.date,
+            note.noteText
+        ))
+    }
 }
