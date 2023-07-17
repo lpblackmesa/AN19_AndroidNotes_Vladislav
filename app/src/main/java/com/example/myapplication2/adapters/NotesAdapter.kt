@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.myapplication2.R
 import com.example.myapplication2.db.Note
+import com.example.myapplication2.ui.RecycleClickListener
 
-class NotesAdapter:ListAdapter<Note, NotesViewHolder>(
+class NotesAdapter(private val listener: RecycleClickListener):ListAdapter<Note, NotesViewHolder>(
+
+    //передаем интерфейс для клика в параметры
     object : DiffUtil.ItemCallback<Note>() {
         override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {
             return oldItem.date == newItem.date
@@ -25,7 +28,7 @@ class NotesAdapter:ListAdapter<Note, NotesViewHolder>(
     }
 
     override fun onBindViewHolder(holder: NotesViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), listener)
     }
 
 

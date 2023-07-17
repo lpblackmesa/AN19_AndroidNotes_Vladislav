@@ -3,6 +3,8 @@ package com.example.myapplication2.db
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import java.time.LocalDateTime
+import java.util.*
 
 object NotesDatabase {
 
@@ -13,12 +15,11 @@ object NotesDatabase {
     //инициализация базы данных
 fun initDB(context : Context) {
     db = Room.databaseBuilder(context, AppDataBase::class.java, "data-base")
-        .allowMainThreadQueries()
         .build()
     noteDao = db?.getNoteDao()
 }
     val notesArray = arrayListOf<Note>(
-        Note("note1",12121221,"NoteText1"),
+        Note("note1", Calendar.getInstance().timeInMillis,"NoteText1"),
         Note("note2",12121221,"NoteText2"),
         Note("note3",12121221,"NoteText3"),
         Note("note4",12121221,"NoteText4"),

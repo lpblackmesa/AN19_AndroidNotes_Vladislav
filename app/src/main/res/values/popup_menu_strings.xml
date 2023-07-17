@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_menu_name">menu_name</string>
+    <string name="action_detele">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_lock">Lock</string>
+</resources>

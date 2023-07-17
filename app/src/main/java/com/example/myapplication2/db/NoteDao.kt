@@ -7,13 +7,14 @@ import com.example.myapplication2.entity.NoteEntity
 @Dao
 interface NoteDao {
     //интерфейс запросов в базу данных
+    //функции suspend для работы их в потоке
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNote(note: NoteEntity)
+    suspend fun insertNote(note: NoteEntity)
 
     @Delete
-    fun delNote(note: NoteEntity)
+    suspend fun delNote(note: NoteEntity)
 
     @Query("SELECT * FROM note")
-    fun getNotes(): List<NoteEntity>
+    suspend fun getNotes(): List<NoteEntity>
 
 }
